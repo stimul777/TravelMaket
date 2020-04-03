@@ -1,11 +1,11 @@
 // Шрифты Ubuntu
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
+// Шапка
 .site-header {
     display: flex;
     max-width: 1920px;
     background-color: green;
-
 
     .socialNetworks-icons {
         display: flex;
@@ -36,4 +36,133 @@
         margin-bottom: 42px;
         }
 
+}
+
+// Нав меню
+.nav-menu {
+    .nav-menu__item {
+        display: flex;
+        li {
+        margin: 0 auto;
+        }
+    }
+}
+
+// Большой слайдер
+.slider-big {
+    display: flex;
+    max-width: 1920px;
+    height: 600px;
+    background-image: url(./images/slider-big/slider-big_background_img.png);
+
+    .slider-basic__header {
+        margin: 0 auto;
+    }
+    .slider-basic__button-left{
+        width: 36px;
+        height: 36px;
+        border: none;
+        margin-top: 282px;
+        margin-bottom: 282px;
+        background-color:rgba(0, 125, 215, 0) ;
+        background-image: url(./images/slider-big/slider-basic__button-left.svg);
+    }
+    .slider-basic__button-right{
+        width: 36px;
+        height: 36px;
+        border: none;
+        margin-top: 282px;
+        margin-bottom: 282px;
+        background-color:rgba(0, 125, 215, 0) ;
+        background-image: url(./images/slider-big/slider-basic__button-right.svg);
+    }
+}
+
+// Маленький слайдер
+.slider-other  {
+    display: flex;
+    justify-content: center;
+
+    .slider-other__img1 {
+        width: 350px;
+        height: 234px;
+        filter: none;
+        background-image: url(./images/slider-other/slider-other_img1.png);
+        
+
+    }
+    .slider-other__img2 {
+        width: 350px;
+        height: 234px;
+        filter: none;
+        background-image: url(./images/slider-other/slider-other_img2.png);
+        
+
+    }
+    .slider-other__img3 {
+        width: 350px;
+        height: 234px;
+        filter: none;
+        background-image: url(./images/slider-other/slider-other_img3.png);
+    } 
+}
+
+// Выбор стран
+.countries-menu {
+    display: flex;
+
+    .countries-menu__item{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+     }
+     .countries-menu__item li {
+         margin: 5px;
+     }
+}
+
+// Блок новости
+.news-block {
+    max-width: 1920px;
+    height: 358px;
+    background-color: #f5f5f5;
+    .news-block__news-elements {
+        display: flex; 
+        border: 2px solid #ffffff;;
+    
+        .news-block__news-elements_item-1 {
+            margin: 15px;
+            img {
+                height: 67px;
+                width: 67px;
+                filter: none;
+                background-image: url(./images/news-block/news-block__news-elements-1.png);
+            }
+        }
+        .news-block__news-elements_item-2 {
+            margin: 15px;
+            img {
+                height: 67px;
+                width: 67px;
+                filter: none;
+                background-image: url(./images/news-block/news-block__news-elements-2.png);
+            }
+        }
+        .news-block__news-elements_item-3 {
+            margin: 15px;
+            img {
+                height: 67px;
+                width: 67px;
+                filter: none;
+                background-image: url(./images/news-block/news-block__news-elements-3.png);
+            }
+        }
+    }
+}
+
+// Подвал
+.footer {
+    max-width: 1920px;
+    max-height: 292px;
+    background-color: #485368;
 }
