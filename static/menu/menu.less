@@ -1,103 +1,175 @@
 // Шрифты Ubuntu
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
+body{
+    font-family: Ubuntu;
+}
+
 // Шапка
 .site-header {
-    display: flex;
-    max-width: 1920px;
-    background-color: green;
-
-    .socialNetworks-icons {
+    max-width: 100%;
+    background-color: rgba(0, 128, 0, 0.404);
+    
+    .site-header__container{
         display: flex;
-        margin-top: 43px;
-        margin-left: 405px;
-        margin-right: 260px;
-        margin-bottom: 69px;
+        justify-content: space-between;
+        padding-left: 405px;
+        padding-right: 405px;
 
-    .socialNetworks-icons__link {
-        width: 36px;
-        height: 36px;
-        margin: 5px;
-        background-color: #d6ae9a;
-        }
-    .socialNetworks-icons__link_VK {
-        background-image: url('./images/site-header/socialNetworks-icons__link_VK.svg');
+        .site-header-callback {
+
+            .callback__icon  {
+                img {
+                filter: none;
+                margin: 5px;
+                width: 20px;
+                height: 20px;
+                background-image: url('./images/site-header/callback__icon.svg');
+                }
+            }
         }
     }
-
-    .site-header__text{
-        margin-top: 40px;
-        margin-top: 32px;
-    }
-    .header__callback {
-        margin-top: 51px;
-        margin-right: 407px;
-        margin-left: 248px;
-        margin-bottom: 42px;
-        }
-
 }
+
+// соцсети иконки
+.socialNetworks-icons {
+    display: flex;
+    margin-top: 43px;
+    margin-bottom: 70px;
+
+.socialNetworks-icons__link{
+    width: 36px;
+    height: 36px;
+    margin-left: 5px; 
+    }
+
+.socialNetworks-icons__link:nth-child(1){
+    margin-left: 0px; 
+    }
+
+.site-header-text h1 {
+    background-image: url('./images/site-header/h1_text.svg');
+    
+     }
+.site-header-text p {
+        color: #9c9c9c;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 27px;
+    }
+}
+
 
 // Нав меню
 .nav-menu {
+    max-width: 100%;
+    padding-left: 405px;
+    padding-right: 405px;
+  
     .nav-menu__item {
         display: flex;
-        li {
-        margin: 0 auto;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 23px;
+        font-size: 18px;
+        line-height: 26.55px;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
         }
+    .nav-menu__item a {
+        text-decoration: none;
+        color: black;
+    }
+    .nav-menu__item a:hover {
+        color: #a07762;
     }
 }
 
 // Большой слайдер
 .slider-big {
     display: flex;
-    max-width: 1920px;
-    height: 600px;
+    justify-content: space-between;
+    min-width: 1920px;
+    max-height: 600px;
+    padding-left: 405px;
+    padding-right: 405px;
     background-image: url(./images/slider-big/slider-big_background_img.png);
+    background-size: 100% auto;
 
-    .slider-basic__header {
-        margin: 0 auto;
+    .slider-big__header h2 {      
+        color: #ffffff;
+        margin-top: 234px;
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 27px;
+        text-transform: uppercase;
     }
-    .slider-basic__button-left{
-        width: 36px;
-        height: 36px;
-        border: none;
-        margin-top: 282px;
-        margin-bottom: 282px;
-        background-color:rgba(0, 125, 215, 0) ;
-        background-image: url(./images/slider-big/slider-basic__button-left.svg);
-    }
-    .slider-basic__button-right{
-        width: 36px;
-        height: 36px;
-        border: none;
-        margin-top: 282px;
-        margin-bottom: 282px;
-        background-color:rgba(0, 125, 215, 0) ;
-        background-image: url(./images/slider-big/slider-basic__button-right.svg);
+
+    .slider-big__header p {
+        margin-top: 27px;
+        width: 396px;
+        height: 22px;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27px;
+        text-transform: uppercase;
     }
 }
+
+// кнопки
+.button-slider-left{
+    width: 36px;
+    height: 36px;
+    border: none;
+    margin-top: 282px;
+    margin-bottom: 282px;
+    background-color:rgba(0, 125, 215, 0) ;
+    background-image: url(./images/slider-big/slider-basic__button-left.svg);
+}
+.button-slider-right{
+    width: 36px;
+    height: 36px;
+    border: none;
+    margin-top: 282px;
+    margin-bottom: 282px;
+    background-color:rgba(0, 125, 215, 0) ;
+    background-image: url(./images/slider-big/slider-basic__button-right.svg);
+}
+
 
 // Маленький слайдер
 .slider-other  {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-left: 405px;
+    padding-right: 405px;
+    background: linear-gradient(to top, white 50%, #f5f5f5 50%);
+
+    .button-slider-left{
+        position: absolute;
+        z-index: 9999;
+        margin: 0 auto;
+        background-color: red;
+    }
+
+    .button-slider-right{
+        position: absolute;
+        margin: 0 auto;
+        background-color: red;
+    }
 
     .slider-other__img1 {
         width: 350px;
         height: 234px;
         filter: none;
         background-image: url(./images/slider-other/slider-other_img1.png);
-        
-
     }
     .slider-other__img2 {
         width: 350px;
         height: 234px;
         filter: none;
         background-image: url(./images/slider-other/slider-other_img2.png);
-        
-
     }
     .slider-other__img3 {
         width: 350px;
@@ -123,46 +195,56 @@
 
 // Блок новости
 .news-block {
-    max-width: 1920px;
-    height: 358px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 405px;
+    padding-right: 405px;
     background-color: #f5f5f5;
+
     .news-block__news-elements {
-        display: flex; 
-        border: 2px solid #ffffff;;
-    
-        .news-block__news-elements_item-1 {
-            margin: 15px;
-            img {
-                height: 67px;
-                width: 67px;
-                filter: none;
-                background-image: url(./images/news-block/news-block__news-elements-1.png);
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid black;
+
+        .news-elements__item_set {
+         
+            p {
+                color: #9c9c9c;
             }
-        }
-        .news-block__news-elements_item-2 {
-            margin: 15px;
-            img {
-                height: 67px;
-                width: 67px;
-                filter: none;
-                background-image: url(./images/news-block/news-block__news-elements-2.png);
+
+            a {
+                text-decoration: none;
+                color: #b8907b;;
             }
-        }
-        .news-block__news-elements_item-3 {
-            margin: 15px;
+
             img {
                 height: 67px;
                 width: 67px;
-                filter: none;
-                background-image: url(./images/news-block/news-block__news-elements-3.png);
+                filter: none; 
             }
         }
     }
 }
 
+
 // Подвал
 .footer {
-    max-width: 1920px;
-    max-height: 292px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 405px;
+    padding-right: 405px;
     background-color: #485368;
+    font-size: 14px;
+    color: #b4bbca;
+
+    .footer__nav-menu {
+        a {
+            text-decoration: none;
+            color: #ffffff;    
+        }
+
+        li{   
+            list-style-type: none;
+        }
+    }
 }
