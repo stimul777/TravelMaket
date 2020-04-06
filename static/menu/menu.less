@@ -1,6 +1,19 @@
 // Шрифты Ubuntu
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
+// Шрифт Proxima Nova
+    @font-face {
+        font-family: 'Proxima Nova ExCn Rg';
+        src: url('./font/ProximaNovaExCn-Bold.eot');
+        src: local('Proxima Nova Extra Condensed Bold'), local('ProximaNovaExCn-Bold'),
+            url('./font/ProximaNovaExCn-Bold.eot?#iefix') format('embedded-opentype'),
+            url('./font/ProximaNovaExCn-Bold.woff2') format('woff2'),
+            url('./font/ProximaNovaExCn-Bold.woff') format('woff'),
+            url('./font/ProximaNovaExCn-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+
 body{
     font-family: Ubuntu;
 }
@@ -9,33 +22,75 @@ body{
 .site-header {
     max-width: 100%;
     background-color: rgba(0, 128, 0, 0.404);
-    
-    .site-header__container{
-        display: flex;
-        justify-content: space-between;
-        padding-left: 405px;
-        padding-right: 405px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 405px;
+     padding-right: 405px;
+
+    .site-header__headline {
+       padding-top: 40px;
+
+        .site-header__headline_streaks {
+            position: absolute;
+            padding-left: 4px;
+            // padding-bottom: 87px;
+            filter: none;
+            width: 220px;
+            height: 20px; 
+        }
+
+        h1 {     
+            padding-left: 64px;
+            font-family: 'Proxima Nova ExCn Rg';
+            font-size: 60px;
+            color: #485368;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #9c9c9c;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 27px; 
+            }    
+        }
 
         .site-header-callback {
+            padding-top: 51px;
+            padding-bottom: 42px;
 
+             a {
+                text-decoration: none;
+                color: #b8907b;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 27px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 27px;
+                color: #485368;
+            }
+ 
             .callback__icon  {
+                display: flex;
                 img {
-                filter: none;
                 margin: 5px;
                 width: 20px;
                 height: 20px;
-                background-image: url('./images/site-header/callback__icon.svg');
-                }
-            }
+            }   
         }
     }
+    
 }
 
 // соцсети иконки
 .socialNetworks-icons {
     display: flex;
     margin-top: 43px;
-    margin-bottom: 70px;
+    // margin-bottom: 70px;
 
 .socialNetworks-icons__link{
     width: 36px;
@@ -89,12 +144,15 @@ body{
 .slider-big {
     display: flex;
     justify-content: space-between;
-    min-width: 1920px;
+    // min-width: 1920px;
     max-height: 600px;
     padding-left: 405px;
     padding-right: 405px;
     background-image: url(./images/slider-big/slider-big_background_img.png);
-    background-size: 100% auto;
+    // background-size: 100% auto no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 
     .slider-big__header h2 {      
         color: #ffffff;
@@ -115,26 +173,25 @@ body{
         line-height: 27px;
         text-transform: uppercase;
     }
-}
 
-// кнопки
-.button-slider-left{
-    width: 36px;
-    height: 36px;
-    border: none;
-    margin-top: 282px;
-    margin-bottom: 282px;
-    background-color:rgba(0, 125, 215, 0) ;
-    background-image: url(./images/slider-big/slider-basic__button-left.svg);
-}
-.button-slider-right{
-    width: 36px;
-    height: 36px;
-    border: none;
-    margin-top: 282px;
-    margin-bottom: 282px;
-    background-color:rgba(0, 125, 215, 0) ;
-    background-image: url(./images/slider-big/slider-basic__button-right.svg);
+    .slider-big__button-slider-left{
+        width: 36px;
+        height: 36px;
+        border: none;
+        margin-top: 282px;
+        margin-bottom: 282px;
+        background-color:rgba(0, 125, 215, 0) ;
+        background-image: url(./images/slider-big/slider-basic__button-left.svg);
+    }
+    .slider-big__button-slider-right{
+        width: 36px;
+        height: 36px;
+        border: none;
+        margin-top: 282px;
+        margin-bottom: 282px;
+        background-color:rgba(0, 125, 215, 0) ;
+        background-image: url(./images/slider-big/slider-basic__button-right.svg);
+    }
 }
 
 
@@ -146,42 +203,33 @@ body{
     padding-right: 405px;
     background: linear-gradient(to top, white 50%, #f5f5f5 50%);
 
-    .button-slider-left{
-        position: absolute;
-        z-index: 9999;
-        margin: 0 auto;
-        background-color: red;
+    .slider-other__button-slider-left{
+        width: 36px;
+        height: 36px;
+        border: 1px solid red;
+        background-color:rgba(0, 125, 215, 0) ;
+        background-image: url(./images/slider-big/slider-basic__button-left.svg);
+    }
+    .slider-other__button-slider-right{
+        width: 36px;
+        height: 36px;
+        border: 1px solid red;
+        background-color:rgba(0, 125, 215, 0) ;
+        background-image: url(./images/slider-big/slider-basic__button-right.svg);
     }
 
-    .button-slider-right{
-        position: absolute;
-        margin: 0 auto;
-        background-color: red;
-    }
-
-    .slider-other__img1 {
-        width: 350px;
-        height: 234px;
-        filter: none;
-        background-image: url(./images/slider-other/slider-other_img1.png);
-    }
-    .slider-other__img2 {
-        width: 350px;
-        height: 234px;
-        filter: none;
-        background-image: url(./images/slider-other/slider-other_img2.png);
-    }
-    .slider-other__img3 {
-        width: 350px;
-        height: 234px;
-        filter: none;
-        background-image: url(./images/slider-other/slider-other_img3.png);
-    } 
+        .slider-other__img {
+            filter: none; 
+            width: 350px;
+            height: 234px;
+        }
 }
 
-// Выбор стран
+// Блок выбора стран
 .countries-menu {
     display: flex;
+    padding-left: 405px;
+    padding-right: 405px;
 
     .countries-menu__item{
         display: flex;
@@ -191,6 +239,12 @@ body{
      .countries-menu__item li {
          margin: 5px;
      }
+}
+
+// Блок описания
+.travel-description {
+    padding-left: 405px;
+    padding-right: 405px;
 }
 
 // Блок новости
