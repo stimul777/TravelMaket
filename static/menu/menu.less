@@ -238,21 +238,30 @@ body {
     }
 }
 
-
-
 // Блок описания
 .travel-description {
     display: flex;
     flex-direction: column;
     margin-left: 21%;
     margin-right: 21%;
+    margin-bottom: 10%;
 
             .countries-menu__item {
                 display: flex;
                 list-style-image: url(./images/countries-menu/item__elipse.svg);
+                margin-top: 9%;
+                margin-left: 2%;
               
+                .countries-menu__item_block {
+                    margin-left: 9%;
+                }
+
+                .countries-menu__item_block:nth-child(1) {
+                    margin-left: 0px; 
+                    }
+
                 li {
-                    margin: 15px;
+                    // margin-bottom: 15px;
                 }
 
                 a {
@@ -266,28 +275,34 @@ body {
         }
     
     .travel-description__header {
-        width: 176px;
-        height: 34px;
-        color: #b8907b;
-        font-size: 48px;
-        font-weight: 500;
-        line-height: 27px;
-        text-transform: uppercase;
-    }
+            // position: absolute;
 
-    .travel-decorative_line {
-        margin: 0%;
-        margin-top: 27px;
-        margin-bottom: 40px;
-        border: none;
-        width: 30px;
-        height: 2px;
-        color: #b8907b;
-        background-color: #b8907b;
-      
-    }
+            h2 {
+            width: 176px;
+            margin-top: 4.3%;
+            height: 34px;
+            color: #b8907b;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 27px;
+            text-transform: uppercase;
+            }
+
+        .travel-decorative_line {
+            margin: 0%;
+            margin-top: 27px;
+            // margin-bottom: 40px;
+            border: none;
+            width: 30px;
+            height: 2px;
+            color: #b8907b;
+            background-color: #b8907b;
+        
+        }
+    }   
 
     .travel-description__text {
+        margin-top: 3%;
         width: 528px;
         height: 197px;
         color: #273137;
@@ -297,17 +312,30 @@ body {
     }
 
     .travel-description__button-readMore {
+        margin-top: 7%;
         width: 154px;
         height: 38px;
         border: 2px solid #485368;
         border-radius: 20px;
     }
 
-    .travel-description__img {
-        display: flex;
+    .travel-description__border {
+        position: absolute;
+        margin-left: 42.3%;
+        margin-top: 5.5%;
+        width: 270px;
         height: 404px;
-        width: 350px;
+        border: 10px solid #f3f3f3;
 
+        .travel-description__img {
+            // position: absolute;
+            // z-index: 1;
+            margin-top: 30%;
+            margin-left: -20%;
+            height: 404px;
+            width: 350px;
+
+        }
     }
 }
 
@@ -398,7 +426,6 @@ body {
         margin-left: 21%;
         margin-right: 21%;
         
-
         .footer__socialNetworks-icons {
             display: flex;
             margin-top: 3%;
@@ -415,9 +442,11 @@ body {
         }
 
         .footer__nav-menu {
-            
+            background-color: green;
+
                 .footer__nav-menu_list {
                     display: flex;
+                  
 
                 a {
                     text-decoration: none;
@@ -436,14 +465,6 @@ body {
             position: absolute;
             padding-top: 8.6%;
             width: 58.2%;
-
-            // p {
-            //     display: block;
-            // }
-            
-            // img {
-            //     display: block;
-            // }
         }
     }
 }
