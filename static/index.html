@@ -13,7 +13,7 @@
 
 <body>
   <header class="site-header">
-          <div class="socialNetworks-icons">
+        <div class="socialNetworks-icons">
             <a href="#" class="socialNetworks-icons__link socialNetworks-icons__link_VK">
                 <img src="menu/images/site-header/socialNetworks-icons__link_VK.png" alt="icon_VK"></a>
             <a href="#" class="socialNetworks-icons__link socialNetworks-icons__link_FB">
@@ -22,7 +22,7 @@
                 <img src="menu/images/site-header/socialNetworks-icons__link_Twitter.png" alt="icon_Twitter"></a>
             <a href="#" class="socialNetworks-icons__link socialNetworks-icons__link_OK">
                 <img src="menu/images/site-header/socialNetworks-icons__link_OK.png" alt="icon_OK"></a>
-            </div>
+        </div>
         <div class="site-header__headline">
             <img class = "site-header__headline_streaks" src="menu/images/site-header/site-header__headline_streaks.svg">
             <h1>Travel</h1>
@@ -38,6 +38,7 @@
   </header>
 
   <div class="nav-menu">
+      <div class="nav-menu__spacer"></div>
         <ul class="nav-menu__item">
             <li><a href="#">Главная</a></li>
             <li><a href="#">О проекте</a></li>
@@ -51,39 +52,46 @@
   </div>
 
   <div class="slider-big">
-      <button class="slider-big__button-slider-left"></button>
-      <div class="slider-big__header">
-            <h2>DISCOVER</h2>
-            <p>Мир, Который вы никогда не видели</p>
-      </div>
-      <button class="slider-big__button-slider-right"></button>
+      <div class="slider-big__container">
+        <button class="slider-big__button-slider-left"></button>
+        <div class="slider-big__header">
+                <h2>DISCOVER</h2>
+                <p>Мир, Который вы никогда не видели</p>
+        </div>
+        <button class="slider-big__button-slider-right"></button>
+    </div>
   </div>
   
-  <div class="slider-other">
-      <button class="slider-other__button-left"></button>
-      <div class="slider-other__container-img">
-        <img class="slider-other__img" src="menu/images/slider-other/slider-other_img1.png">
-        <img class="slider-other__img" src="menu/images/slider-other/slider-other_img2.png"> 
-        <img class="slider-other__img" src="menu/images/slider-other/slider-other_img3.png">
-      </div>
-      <button class="slider-other__button-right"></button>
+  <div class="slider-other">       
+        <div class="slider-other__container-img">
+            <div class="slider-other__img">
+                <button class="slider-other__button-left"></button>
+                <img src="menu/images/slider-other/slider-other_img1.png">
+            </div>
+                <div class="slider-other__img">
+                <img src="menu/images/slider-other/slider-other_img2.png"> 
+            </div>
+            <div class="slider-other__img">
+                <button class="slider-other__button-right"></button>
+                <img src="menu/images/slider-other/slider-other_img3.png">
+            </div>
+        </div>
   </div>
 
-  <div class="countries-menu">
-      <ul class="countries-menu__item">
-          <li><a href="#">Австрия</a></li>
-          <li><a href="#">Белоруссия</a></li>
-          <li><a href="#">Бельгия</a></li>
-          <li><a href="#">Болгария</a></li>
-          <li><a href="#">Бразилия</a></li>
-          <li><a href="#">Великобритания</a></li>
-          <li><a href="#">Венгрия</a></li>
-          <li><a href="#">Вьетнам</a></li>
-      </ul>
-  </div>
 
   <div class="travel-description">
+        <ul class="countries-menu__item">
+            <li><a href="#">Австрия</a></li>
+            <li><a href="#">Белоруссия</a></li>
+            <li><a href="#">Бельгия</a></li>
+            <li><a href="#">Болгария</a></li>
+            <li><a href="#">Бразилия</a></li>
+            <li><a href="#">Великобритания</a></li>
+            <li><a href="#">Венгрия</a></li>
+            <li><a href="#">Вьетнам</a></li>
+        </ul>
       <h2 class="travel-description__header">TRAVEL</h2>
+      <hr class="travel-decorative_line">
       <p class="travel-description__text">
           Новая Зеландия – ни что иное, как миниатюрная проекция нашего земного шара, крохотные острова в юго-западной части
           Океании... Это место уже стало культовым среди туристов, бегущих от суеты мегаполисов. Новая Зеландия на своей
@@ -91,11 +99,13 @@
           Здесь вы найдете бескрайние пляжи, традиционные деревушки, горные долины и большие города, тесно находящиеся друг
           с другом.
       </p>
-      <button class="travel-description__button-readMore"></button>
+      <button class="travel-description__button-readMore">Подробнее</button>
       <div class="travel-description__img">
           <img src="/menu/images/travel-description/travel-description__img.png" alt="travel_img">
       </div>
   </div>
+
+
 
   <div class="news-block">
       <div class="news-block__news-elements">
@@ -108,7 +118,7 @@
           <div class="news-elements__item_set">
               <img src="/menu/images/news-block/news-block__news-elements-2.png" alt="src_item_2">
               <p>03.02.2017</p>
-              <a href="#">Парусный спорт в Стокгольме! Тебе понравится это!</a>
+              <a href="#">Парусный спорт в Стокгольме!<br>Тебе понравится это!</a> 
           </div>
           <div class="news-elements__item_set">
              <img src="/menu/images/news-block/news-block__news-elements-3.png" alt="src_item_3">
@@ -120,31 +130,34 @@
   </div>
 
   <div class="footer">
-      <div class="footer__socialNetworks-icons">
-        <a href="#" class="socialNetworks-icons__link">
-            <img src="menu/images/footer/socialNetworks-icons__link_footer_VK.png" alt="VK"></a>
-        <a href="#" class="socialNetworks-icons__link">
-            <img src="menu/images/footer/socialNetworks-icons__link_footer_FB.png" alt="FB"></a>
-        <a href="#" class="socialNetworks-icons__link">
-            <img src="menu/images/footer/socialNetworks-icons__link_footer_Twitter.png" alt="Twitter"></a>
-        <a href="#" class="socialNetworks-icons__link">
-            <img src="menu/images/footer/socialNetworks-icons__link_footer_OK.png" alt="OK"></a>
-    </div>
-      <div class="footer__nav-menu">
-          <ul>
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">О проекте</a></li>
-              <li><a href="#">Туры</a></li>
-              <li><a href="#">Страны</a></li>
-              <li><a href="#">Блог</a></li>
-              <li><a href="#">Сотрудничество</a></li>
-              <li><a href="#">Контакты</a></li>
-          </ul>
-      </div>
-    <div class="footer__address">
-        <p>© 2017 Travel</p>
-        <p>г. Москва, ст. метро Кузьминки, Волжский бульвар, д.37, корп.1.</p>
-        <img class="logo" src="menu/images/footer/logo.svg" alt="logo">
+      <div class="footer__container">
+            <div class="footer__socialNetworks-icons">
+                <a href="#" class="socialNetworks-icons__link">
+                    <img src="menu/images/footer/socialNetworks-icons__link_footer_VK.png" alt="VK"></a>
+                <a href="#" class="socialNetworks-icons__link">
+                    <img src="menu/images/footer/socialNetworks-icons__link_footer_FB.png" alt="FB"></a>
+                <a href="#" class="socialNetworks-icons__link">
+                    <img src="menu/images/footer/socialNetworks-icons__link_footer_Twitter.png" alt="Twitter"></a>
+                <a href="#" class="socialNetworks-icons__link">
+                    <img src="menu/images/footer/socialNetworks-icons__link_footer_OK.png" alt="OK"></a>
+            </div>
+            <div class="footer__nav-menu">
+                <ul class="footer__nav-menu_list" >
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Туры</a></li>
+                    <li><a href="#">Страны</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__address">
+                <p>© 2017 Travel</p>
+                <p>г. Москва, ст. метро Кузьминки, Волжский бульвар, д.37, корп.1.</p>
+                <img class="logo" src="menu/images/footer/logo.svg" alt="logo">
+            </div>
+        </div>
     </div>
   <script src="menu/menu.js"></script>
 </body>
