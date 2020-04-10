@@ -135,6 +135,7 @@ body {
         text-decoration: none;
         color: black;
     }
+    
     .nav-menu__item a:hover {
         color: #a07762;
     }
@@ -246,17 +247,17 @@ body {
     margin-right: 21%;
     margin-bottom: 10%;
 
-            .countries-menu__item {
+            .travel-description__nav-menu {
                 display: flex;
                 list-style-image: url(./images/countries-menu/item__elipse.svg);
                 margin-top: 9%;
                 margin-left: 2%;
               
-                .countries-menu__item_block {
+                .travel-description__nav-menu_block {
                     margin-left: 9%;
                 }
 
-                .countries-menu__item_block:nth-child(1) {
+                .travel-description__nav-menu_block:nth-child(1) {
                     margin-left: 0px; 
                     }
 
@@ -339,7 +340,7 @@ body {
     }
 }
 
-// Блок новости
+// Блок новостей
 .news-block {
     display: flex;
     flex-direction: column;
@@ -351,7 +352,7 @@ body {
         margin-left: 20.8%;
         margin-right: 21%;
         margin-top: 3.1%;
-        margin-bottom: 4.4%;
+        //
         padding-bottom: 2.8%;
         border: 2px solid #ffffff;
         
@@ -366,25 +367,32 @@ body {
             text-transform: uppercase;
         }
     
-        .news-elements__item_set {
+        .news-elements__block {
             display: flex;
-            flex-flow: column wrap;
             height: 67px;
-            width: 15%;
+            width: 300px;
             margin-top: 8%;
-            margin-left: 2.5%;
-            margin-right: 15%;
+            margin-left: 3%;
+            // margin-right: 15%; 
           
             p {
-                color: #485368;
+                margin-left: 7%;
+                margin-top: -3%;
+                color: #9c9c9c;
                 font-size: 14px;
                 font-weight: 400;
-                line-height: 20px;
+                line-height: 27px;
             }
 
             a {
+                position: absolute;
+                margin-top: 1%;
+                margin-left: 4.5%;
                 text-decoration: none;
                 color: #485368;
+                font-size: 0.7vw;
+                font-weight: 400;
+                line-height: 20px;
             }
 
             a:hover {
@@ -392,18 +400,31 @@ body {
             }
 
             img {
+                display: block;
                 height: 67px;
                 width: 67px;
                 filter: none; 
             }
         }
+
+        .news-elements__item_1 {
+            margin-left: 2.5%;
+        }
+
+        .news-elements__item_2 {
+            margin-left: 4.8%;
+        }
+
+        .news-elements__item_3 {
+            word-break: break-all;
+            margin-left: 7.2%;
+        }
     }
 
     .news-block_button-allNews {
-        position: absolute;
-        margin-left: 46%;
-        margin-right: 50%;
-        margin-top: 13.2%;
+        margin-top: -20px;
+        margin-left: 45%;
+        margin-bottom: 4%;
         width: 154px;
         height: 38px;
         border: 2px solid #ffffff;
@@ -442,20 +463,27 @@ body {
         }
 
         .footer__nav-menu {
-            background-color: green;
+            display: flex;
+            position: absolute;
+            margin-top: 1%;
+            margin-left: 20%;
+          
+            .footer__nav-menu_block {
+                white-space: nowrap;
+                margin-left: 95%;
+            }
 
-                .footer__nav-menu_list {
-                    display: flex;
-                  
-
-                a {
-                    text-decoration: none;
-                    color: #ffffff;    
+            .footer__nav-menu_block:nth-child(1) {
+                margin-left: 0; 
                 }
 
-                li{   
-                    list-style-type: none;
-                }
+            .footer__nav-menu_block_2 {
+                margin-left: 75%;
+            }    
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
             }
         }
 
