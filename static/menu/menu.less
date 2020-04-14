@@ -35,10 +35,6 @@ body {
             height: 36px;
             margin-left: 5px; 
         }
-        
-        // .socialNetworks-icons__link:nth-child(1) {
-        //     margin-left: 0px; 
-        //     }
     }
 
     .site-header__headline {
@@ -55,6 +51,7 @@ body {
         }
 
         .travel-decorative_line {
+            margin: 0 auto;
             margin-top: 20%;
             border: none;
             width: 30px;
@@ -73,7 +70,7 @@ body {
     }
 
         .site-header-callback {
-            margin-top: 2.6%;
+            margin-top: 2.3%;
             
             .callback__tel {   
                 text-decoration: none;
@@ -416,23 +413,25 @@ body {
 
 // Подвал
 .footer {
-    display: flex;
+    // display: flex;
     background-color: #485368;
     font-size: 14px;
     color: #b4bbca;
-    // min-width: 60%;
 
     .footer__container {
         display: flex;
-        width: 100%;
-        justify-content: center;
-        margin-top: 5%;
-        margin-bottom: 6%;
-        // margin: 0 auto;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 60%;
+        
+        padding-top: 4%;
+        padding-bottom: 7%;
+
         
         .footer__socialNetworks-icons {
             display: flex;
             z-index: 1;
+            // margin-left:  ;
 
             .socialNetworks-icons__link{
                 width: 36px;
@@ -447,20 +446,20 @@ body {
 
         .footer__nav-menu {
             display: flex;
-            margin-left: 20%;
+            margin-right: 45%;
           
-            .footer__nav-menu_block {
+            .footer__nav-menu_block-1 {
                 white-space: nowrap;
-                margin-left: 40%;
-            }
-
-            .footer__nav-menu_block:nth-child(1) {
                 margin-left: 0; 
                 }
 
-            .footer__nav-menu_block_2 {
-                margin-left: 4%;
+            .footer__nav-menu_block-2 {
+                margin-left: 85%;
             }    
+
+            .footer__nav-menu_block-3 {
+                margin-left: 70%;
+            } 
 
             a {
                 text-decoration: none;
@@ -469,10 +468,11 @@ body {
         }
 
         .footer__address {
+            position: absolute;
             display: flex;
             justify-content: space-between;
-         
-            margin-top: 2%;
+            min-width: 60%;
+            margin-top: 7%;
               
         }
     }
