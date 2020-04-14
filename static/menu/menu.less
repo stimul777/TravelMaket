@@ -43,14 +43,14 @@ body {
         justify-content: space-around;
         margin: 0 auto;
 
-        .site-header__headline_h1 {
+        .site-header__headline-h1 {
             font-family: 'Proxima Nova ExCn Rg';
             font-size: 60px;
             font-weight: 700;
             text-transform: uppercase;
         }
 
-        .travel-decorative_line {
+        .travel-decorative-line {
             margin: 0 auto;
             margin-top: 20%;
             border: none;
@@ -59,7 +59,7 @@ body {
             background-color: #485368;
         }
 
-        .site-header__headline_h2 {
+        .site-header__headline-h2 {
             position: absolute;
             margin-top: 75px;
             color: #9c9c9c;           
@@ -198,20 +198,51 @@ body {
         max-width: 60%;
         margin: 0 auto;
         padding-top: 30px;
-    
-        .slider-other__img img {
-            filter: none; 
+                 
+        .slider-other__img {
+            // filter: none; 
+            position: relative;
             width: 350px;
-            height: 234px;
+            height: auto;
+    
+            .slider-other__img_hover-border {
+                display: none;
+                position: absolute;
+                outline: 2px solid #ffffff; 
+                outline-offset: -20px; 
+                padding: 10px; 
+                height: 100%; 
+                width: 100%;
+
+            }
+
+            .img_hover-border-text {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                margin-top: 25%;
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+            } 
+        }    
+        
+        .slider-other__img:hover .slider-other__img_hover-border {
+            display: block;
+            cursor: pointer;  
+            transition: all 0.2s ease-in;
         }
+
     }
 
     .slider-other__button   {
         position: absolute;
         display: flex;
         justify-content: space-between;
-        min-width: 60%;
         align-self: center;
+        min-width: 60%;
         
         .slider-other__button-left{
             margin-left: 10px;
@@ -285,7 +316,7 @@ body {
             text-transform: uppercase;
             }
 
-        .travel-decorative_line {
+        .travel-decorative-line {
             margin: 0%;
             margin-top: 27px;
             border: none;
