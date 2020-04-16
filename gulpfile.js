@@ -18,21 +18,21 @@ function html() {
 };
 
 function js() {
-	return gulp.src('./static/menu/*.js')
-		.pipe(gulp.dest('./build/menu/'))
+	return gulp.src('./static/project/*.js')
+		.pipe(gulp.dest('./build/project/'))
 		.pipe(browserSync.stream());
 };
 
 function css() {
-	return gulp.src('./static/menu/*.css')
-		.pipe(gulp.dest('./build/menu/'))
+	return gulp.src('./static/project/*.css')
+		.pipe(gulp.dest('./build/project/'))
 		.pipe(browserSync.stream());
 };
 
 function less() {
-	return gulp.src('./static/menu/*.less')
+	return gulp.src('./static/project/*.less')
 					.pipe(sourcemaps.init())
-					.pipe(gulp_less('menu.css'))
+					.pipe(gulp_less('main.css'))
 					.pipe(gulp_autoprefixer({
 			            overrideBrowserslist: ['> 0.1%'],
 			            cascade: false
@@ -40,14 +40,14 @@ function less() {
 		        	.pipe(gcmq())
 		        	.pipe(cleanCSS({level:2}))
 		        	.pipe(sourcemaps.write())
-					.pipe(gulp.dest('./build/menu'))
+					.pipe(gulp.dest('./build/project'))
 					.pipe(browserSync.stream());
 };
 
 function sass() {
-	return gulp.src('./static/menu/*.sass')
+	return gulp.src('./static/project/*.sass')
 					.pipe(sourcemaps.init())
-					.pipe(gulp_sass('menu.css'))
+					.pipe(gulp_sass('main.css'))
 					.pipe(gulp_autoprefixer({
 			            overrideBrowserslist: ['> 0.1%'],
 			            cascade: false
@@ -55,7 +55,7 @@ function sass() {
 		        	.pipe(gcmq())
 		        	.pipe(cleanCSS({level:2}))
 		        	.pipe(sourcemaps.write())
-					.pipe(gulp.dest('./build/menu'))
+					.pipe(gulp.dest('./build/project'))
 					.pipe(browserSync.stream());
 	
   };
@@ -67,14 +67,14 @@ function watch () {
         }
     });
 
-	gulp.watch('./static/menu/*.less',less).on('change', browserSync.reload);
-	gulp.watch('./static/menu/*.scss',sass).on('change', browserSync.reload);
+	gulp.watch('./static/project/*.less',less).on('change', browserSync.reload);
+	gulp.watch('./static/project/*.scss',sass).on('change', browserSync.reload);
 	gulp.watch('./static/styles/bem/components/*.less',sass).on('change', browserSync.reload);
     gulp.watch('./static/styles/bem/components/*.less',less).on('change', browserSync.reload);
 
 	// Стандарт
-	gulp.watch('./static/menu/*.js',js).on('change', browserSync.reload);
-	gulp.watch('./static/menu/*.css',css).on('change', browserSync.reload);
+	gulp.watch('./static/project/*.js',js).on('change', browserSync.reload);
+	gulp.watch('./static/project/*.css',css).on('change', browserSync.reload);
 	gulp.watch('./static/index.html',html).on('change', browserSync.reload);
 };
 
